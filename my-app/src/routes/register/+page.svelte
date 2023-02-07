@@ -52,6 +52,9 @@
         box-sizing: border-box;
         font-size: 14px;
     }
+    input:hover{
+        background: #D8D8D8;
+    }
     button {
         width: 150px;
         height: 40px;
@@ -63,6 +66,9 @@
         margin-top: 20px;
         font-size: 30px;
         font-family: "Roboto", sans-serif;
+    }
+    button:hover{
+        background: lightgrey;
     }
 
 </style>
