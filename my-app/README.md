@@ -1,38 +1,31 @@
-# create-svelte
+## Backend
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
+Install `cors` on the backend and add the following line in the index.js:
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+const cors = require("cors");
+...
+app.use(cors());
 ```
 
-## Developing
+## User Stories
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+All the user stories asked are possible :
 
-```bash
-npm run dev
+US1: As a random visitor, I want to be able to register an account or log-in, so I can
+access all features
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+US2: As a random visitor, I want to be redirected to the login/register page when I click on
+“location" tab, so that I know I must log-in to see its content
 
-## Building
+US3: As a logged-in user, I want to see locations and be able to click on one location to
+open a modal containing details, so that the website is useful
 
-To create a production version of your app:
+US4: As an “admin" user, I want to see a “Add Location” button in the location page, so
+that I can create a new location
 
-```bash
-npm run build
-```
+US5: As an “admin" user, I want to see a button to edit locations in the array of locations,
+so that I can edit existing locations
 
-You can preview the production build with `npm run preview`.
+US6: As an “admin" user, I want to see a button to delete locations in the array of
+locations so that I can delete existing locations
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

@@ -1,12 +1,11 @@
 import { fail, redirect } from '@sveltejs/kit';
 import * as api from '../../api.js';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ locals }) {
-	if (locals.user) throw redirect(307, '/');
+export async function load({ parent }) {
+	const { user } = await parent();
+	if (user) throw redirect(307, '/');
 }
 
-/** @type {import('./$types').Actions} */
 export const actions = {
 	default: async ({ cookies, request }) => {
 		const data = await request.formData();
@@ -20,9 +19,9 @@ export const actions = {
 			return fail(401, body);
 		}
 
-		const value = btoa(JSON.stringify(body.user));
+		const value = body.jwt;
 		cookies.set('jwt', value, { path: '/' });
 
-		throw redirect(307, '/');
+		throw redirect(307, '/locations');
 	}
 };
