@@ -1,6 +1,5 @@
 <script>
   import { enhance } from '$app/forms';
-  export let form;
 </script>
 <svelte:head>
   <title>Create an account</title>
