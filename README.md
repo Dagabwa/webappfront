@@ -6,6 +6,14 @@ const cors = require("cors");
 ...
 app.use(cors());
 ```
+Then run it.
+
+## Frontend
+To run the app, go at least to the my-app repository and enter the following command :
+```bash
+npm run dev
+```
+Then, go on `http://127.0.0.1:5173/` or directly on `http://127.0.0.1:5173/login`.
 
 ## User Stories
 
