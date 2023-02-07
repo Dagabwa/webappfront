@@ -50,7 +50,6 @@
       <div class="field">
         <p class="title">District : </p>
         <input name="district"
-               type="number"
                bind:value={location.district}
                disabled="{!isAdmin}">
       </div>
@@ -107,7 +106,7 @@
 <style>
     .deploy {
         width: 100%;
-        color: #444444;
+        color: #000000;
         font-size: 14px;
     }
 
@@ -115,16 +114,17 @@
         margin: 0;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        text-transform: capitalize;
+        font-family: "Roboto", sans-serif;
         padding: 10px;
+        text-transform: lowercase;
     }
 
     h3:hover {
-        background: #999999;
+        background: darkcyan;
     }
 
     body {
-        background: #EAEBEC;
+        background: lightblue;
         text-align: center;
         width: 60%;
         margin: 10px auto;

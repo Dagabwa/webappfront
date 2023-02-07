@@ -36,8 +36,7 @@
           <div class="field">
             <p class="title">District : </p>
             <input  name="district"
-                    placeholder=""
-                    type="number">
+                    placeholder="">
           </div>
           <div class="field">
             <p class="title">Latitude : </p>
@@ -108,15 +107,15 @@
     .header{
         display: flex;
         flex-direction: row;
-        background: #999999;
-        color: #FFFFFF;
+        background: lightblue;
+        color: black;
         font-size: 20px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         justify-content: space-around;
     }
     .header ::placeholder{
-        color: white;
+        color: black;
         opacity: 0.5;
     }
     .film-infos ::placeholder{
@@ -179,10 +178,10 @@
         border-radius: 5px;
     }
     .header input{
-        background: #999999;
+        background: lightblue;
     }
     .header input:hover{
-        background: #999999;
+        background: darkcyan;
     }
     input:hover{
         background: #EAEBEC;
@@ -198,7 +197,7 @@
         width: 40%;
         height: 30px;
         cursor: pointer;
-        background: #444444;
+        background: lightblue;
     }
     .buttons button:hover{
         background: #000000;
